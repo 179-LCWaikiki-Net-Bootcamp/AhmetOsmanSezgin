@@ -20,6 +20,7 @@ namespace ProductAPI
             host.Run();
         }
 
+
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
