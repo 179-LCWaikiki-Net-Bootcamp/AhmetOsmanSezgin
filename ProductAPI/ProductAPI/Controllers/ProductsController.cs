@@ -37,7 +37,7 @@ namespace ProductAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetProduct(int id)
+        public IActionResult GetProductById(int id)
         {
             GetProductDetailQuery query = new(_context, _mapper);
             GetProductDetailQueryValidator validator = new();
