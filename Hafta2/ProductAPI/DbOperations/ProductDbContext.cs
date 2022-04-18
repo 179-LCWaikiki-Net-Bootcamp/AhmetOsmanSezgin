@@ -1,15 +1,29 @@
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using ProductAPI.Entities;
 
 namespace ProductAPI.DbOperations
 {
-    public class ProductDbContext : DbContext
+    public class ProductDbContext : DbContext, IProductDbContext
     {
-        public ProductDbContext(DbContextOptions<ProductDbContext> options) : base(options)
+       protected readonly IConfiguration Configuration;
+
+        public ProductDbContext(IConfiguration configuration)
         {
+            Configuration = configuration;
+        }
+
+        public ProductDbContext(DbContextOptions options) : base(options)
+        {
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            options.UseSqlServer(Configuration.GetConnectionString("ProductDb"));
         }
 
         public DbSet<Product> Products { get; set; }
         public DbSet<Category> Categories { get; set; }
+        public override int SaveChanges() => base.SaveChanges();
     }
 }
