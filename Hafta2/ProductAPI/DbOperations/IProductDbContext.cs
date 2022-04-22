@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using ProductAPI.Entities;
+using ProductAPI.Models;
 
 namespace ProductAPI.DbOperations
 {

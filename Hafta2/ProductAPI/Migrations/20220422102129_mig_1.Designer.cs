@@ -9,8 +9,8 @@ using ProductAPI.DbOperations;
 namespace ProductAPI.Migrations
 {
     [DbContext(typeof(ProductDbContext))]
-    [Migration("20220418144641_Mig_2")]
-    partial class Mig_2
+    [Migration("20220422102129_mig_1")]
+    partial class mig_1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -20,7 +20,7 @@ namespace ProductAPI.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
-            modelBuilder.Entity("ProductAPI.Entities.Category", b =>
+            modelBuilder.Entity("ProductAPI.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -33,12 +33,15 @@ namespace ProductAPI.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("ProductId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("ProductAPI.Entities.Product", b =>
+            modelBuilder.Entity("ProductAPI.Models.Product", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -51,11 +54,17 @@ namespace ProductAPI.Migrations
                     b.Property<string>("Description")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<int>("Price")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Stock")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -64,9 +73,9 @@ namespace ProductAPI.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("ProductAPI.Entities.Product", b =>
+            modelBuilder.Entity("ProductAPI.Models.Product", b =>
                 {
-                    b.HasOne("ProductAPI.Entities.Category", "Category")
+                    b.HasOne("ProductAPI.Models.Category", "Category")
                         .WithMany("Products")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -75,7 +84,7 @@ namespace ProductAPI.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("ProductAPI.Entities.Category", b =>
+            modelBuilder.Entity("ProductAPI.Models.Category", b =>
                 {
                     b.Navigation("Products");
                 });

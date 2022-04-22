@@ -56,3 +56,13 @@
 /home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/obj/Debug/net5.0/ProductAPI.pdb
 /home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/obj/Debug/net5.0/ProductAPI.genruntimeconfig.cache
 /home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/obj/Debug/net5.0/ref/ProductAPI.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/AutoMapper.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/FluentValidation.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/FluentValidation.AspNetCore.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/FluentValidation.DependencyInjectionExtensions.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/Microsoft.Extensions.Options.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/Microsoft.Extensions.Primitives.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/System.Runtime.CompilerServices.Unsafe.dll
+/home/ahmet/projects/AhmetOsmanSezgin/Hafta2/ProductAPI/bin/Debug/net5.0/Bogus.dll
